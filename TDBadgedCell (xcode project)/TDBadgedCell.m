@@ -91,7 +91,9 @@
 	[__badge renderInContext:context];
 	CGContextRestoreGState(context);
 	
-	CGContextSetBlendMode(context, kCGBlendModeClear);
+	CGContextSetBlendMode(context, kCGBlendModeNormal);
+
+    [[UIColor whiteColor] set];
 	
 	[__badgeString drawInRect:bounds withFont:[UIFont boldSystemFontOfSize:fontsize] lineBreakMode:UILineBreakModeClip];
 	
